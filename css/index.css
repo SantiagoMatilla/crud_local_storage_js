@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*font-family*/
+}
+
+input:not([type="radio"]):not([type="checkbox"]), button{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: initial;
+}
+
+body{
+    background: white;
+    color: rgb(14, 14, 14);
+}
+section{
+    margin: 2rem 0rem;
+    padding: 0rem 1.5rem;
+}
+
+h2{
+    color: black;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+h3{
+    color: gray;
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.salute .title{
+    display: flex;
+}
+
+.salute .title input{
+    margin-left: 0.5rem;
+    flex: 1 1 0%;
+    min-width: 0;
+}
+
+.salute .title, .salute .title input{
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.createToDo input[type="text"] {
+    display: block;
+    width: 100%;
+    font-size: 1.125rem;
+    padding: 1rem 1.5rem;
+    color: black;
+    background-color: white;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.createToDo .options{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.createToDo .options label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 0.5rem;
+}
+
+input[type="radio"],
+input[type="checkbox"]{
+    display: none;
+}
+
+.bubble{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid salmon;
+}
+
+.bubble.personal{
+    border-color: salmon;
+}
+
+.bubble::after{
+    content: "";
+    display: block;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    background-color: salmon;
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+}
+
+.bubble.personal::after{
+    background-color: aqua
+}
+
+input:checked ~ .bubble::after{
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+}
+
+.createToDo .options label div{
+    color: grey;
+    font-size: 1.125rem;
+    margin-top: 1rem;
+}
+
+.createToDo input[type="submit"]{
+    display: block;
+    width: 100%;
+    font-size: 1.125rem;
+    padding: 1rem 1.5rem;
+    color: white;
+    background-color: blue;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.createToDo input[type="submit"]:hover{
+    opacity: 0.75;
+}
+
+.toDoList .list{
+    margin: 1rem 0;
+}
+
+.toDoList .toDoItem{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.toDoItem label{
+    display: block;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.toDoItem .toDoContent{
+    flex: 1 1 0%;
+}
+
+.toDoItem .toDoContent input{
+    color: black;
+    font-size: 1.125rem;
+}
+
+.toDoItem .actions{
+    display: flex;
+    align-items: center;
+}
+
+.toDoItem .actions button{
+    display: block;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    color: white;
+    cursor: pointer;
+    transition: 0,2s ease-in-out;
+}
+
+.toDoItem .actions button:hover{
+    opacity: 0.75;
+}
+
+.toDoItem .actions .edit{
+    margin-right: 0.5rem;
+    background-color: blue;
+}
+
+.toDoItem .actions .delete{
+    background-color: orangered;
+}
+
+.toDoItem.done .toDoContent input{
+    text-decoration: line-through;
+}

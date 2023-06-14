@@ -5,8 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crud en Local Storage con JS</title>
+
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    
+    <main class="app">
+        <section class="salute">
+            <h1 class="title">
+                Hello there, <input type="text" id="name" placeholder="Put your name here please">
+            </h1>
+        </section>
+
+        <section class="createToDo">
+            <h2>CREATE A TO-DO LIST</h2>
+
+            <form id="newToDoForm">
+                <h3>What's on your To-Do list?</h3>
+                <input type="text" name="content" id="content" placeholder="ex: go shopping">
+
+                <h3>Pick a category</h3>
+                <div class="categoryOptions">
+                    <label>
+                        <input type="radio" name="category" id="category1" value="business">
+                        <span class="bubble business"></span>
+                        <div>Business</div>
+                    </label>
+
+
+                    <label>
+                        <input type="radio" name="category" id="category2" value="personal">
+                        <span class="bubble personal"></span>
+                        <div>Personal</div>
+                    </label>
+                </div>
+
+                <input type="submit" value="Add To-Do">
+            </form>
+        </section>
+
+        <section class="toDoList">
+            <h2>TO-DO LIST</h2>
+            <div class="list" id="toDoList">
+                <div class="toDoItem">
+                    <label>
+                        <input type="checkbox">
+                        <span class="bubble personal"></span>
+                    </label>
+
+                    <div class="toDoContent">
+                        <input type="text" value="Buy fruit" readonly>
+                    </div>
+
+                    <div class="actions">
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/index.js"></script>
 </body>
 </html>
